@@ -5,4 +5,4 @@ read topic_name
 topic_name=$(python -c "import urllib; print urllib.quote('''$topic_name''')")
 response=$(curl -s "http://192.168.50.10:5000/search/${topic_name}")
 echo "The response is:"
-echo $response
+echo $response | python -mjson.tool
