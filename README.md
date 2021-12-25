@@ -1,17 +1,15 @@
 # Bazar.com Frontend
-
-#### This repo is part of Lab 1: Bazar.com: A Multi-tier Online Book Store
+#### This repo is part of Bazar.com: A Multi-tier Online Book Store
 
 To run it please do the following:
 
-1- Make sure you have vagrant and virtualbox installed
+1- Make sure you have docker installed
 
-2- Make sure both Catalog and Order servers are running (Otherwise you will see empty responses) 
-
+2 - Make sure you have your network set up (docker network create --subnet=172.18.0.0/16 bazar)
 3- Within the repo directory run these commands in your terminal:
-* vagrant up
-* vagrant ssh
-* cd /vagrant
+* docker build --tag bazar-frontend .
+* docker run --net bazar --ip 172.18.0.50 -it  --rm bazar-frontend
+
 
 Now you can run the following:
 
