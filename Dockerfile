@@ -6,7 +6,8 @@ FROM ubuntu:latest
 # Python and Pip
 RUN apt-get update && apt-get install -y \
     python2\
-    curl
+    curl\
+    bc
 # Set environment variables.
 ENV HOME /root
 
